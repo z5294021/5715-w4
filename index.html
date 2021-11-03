@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todo 🍿</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/underscore/underscore-min.js"></script>
+		<script src="logic.js"></script>
+	</head>
+	<body onload="bodyDidLoad()">
+		<h1>Weather Observations App</h1>
+		<label for="Date">Date:</label>
+		<input
+			id="Date"
+			name="Date"
+			type="date"
+			placeholder="yy-mm-dd"
+		/> <br/>
+		
+		<label for="Minimum_temperature">Minimum temperature (°C):</label>
+		<input
+			id="Minimum_temperature"
+			name="Minimum_temperature"
+			type="text"
+			placeholder="Min temperature"
+		/><br/>
+
+		<label for="Maximum_temperature">Maximum temperature (°C):</label>
+		<input
+			id="Maximum_temperature"
+			name="Maximum_temperature"
+			type="text"
+			placeholder="Max temperature"
+		/><br/>
+
+		<label for="Weather_condition">Weather condition:</label>
+		<input
+			id="Weather_condition"
+			name="Weather_condition"
+			type="text"
+			placeholder="Weather condition"
+		/><br/>
+		
+
+		<button onclick="userDidClickCreate()">Create</button>
+		<button onclick="downloadJSON()">Download</button>
+		<button onclick="userDidClickRobertButton()">Robert</button>
+
+		<hr />
+
+		<h2>Upload existing file</h2>
+		<input id="fileUploader" type="file" />
+
+		<hr />
+
+		<table id="tasksTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Date</th>
+					<th>Minimum temperature (°C)</th>
+					<th>Maximum temperature (°C)</th>
+					<th>Weather condition</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="tbodyForTasks">
+			</tbody>
+		</table>
+	</body>
+</html>
